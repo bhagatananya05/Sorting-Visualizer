@@ -8,4 +8,9 @@ Bubble Sort
 Insertion Sort
 Merge Sort
 
+How to use
+Navigate to the website
+Click on the algorithm you want to visualize
+Adjust speed and size of the array
+
 gif
