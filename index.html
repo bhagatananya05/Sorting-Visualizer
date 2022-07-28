@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sorting Visualizer</title>
+  <!-- Google Fonts - Ubuntu -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap">
+  <!-- External CSS File -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Top Level Container to restrict growing of the width of the body -->
+  <div class="main-container">
+    <header>
+      <h1 class="title"><span><img class="img" src="./images/title.png"></span></h1>
+      <nav class="navbar">
+        <div class="nav-left">
+          <button type="button" class="btn new-array">New array</button>
+          <div class="slider-container">
+            <p class="slider-text">Array size</p>
+            <input class="array_size slider-input" type="range" min=2 max=60 step=1 value=10>
+          </div>
+          <div class="slider-container">
+            <p class="slider-text">Speed</p>
+            <input class="speed slider-input" type="range" min=100 max=3000 step=100 value=1000>
+          </div>
+        </div>
+        <div class="nav-right">
+          <button type="button" class="btn selection-sort">Selection sort</button>
+          <button type="button" class="btn bubble-sort">Bubble sort</button>
+          <button type="button" class="btn insertion-sort">Insertion sort</button>
+          <button type="button" class="btn merge-sort">Merge sort</button>
+        </div>
+      </nav>
+    </header>
+    <!-- Contains all the dynamically generated div / bar -->
+    <div class="bar-container"></div>
+  </div>
+  <!-- External Javascript Files -->
+  <script src="./js_files/swap_bars.js"></script>
+  <script src="./js_files/algorithms/selectionsort.js"></script>
+  <script src="./js_files/algorithms/bubblesort.js"></script>
+  <script src="./js_files/algorithms/insertionsort.js"></script>
+  <script src="./js_files/algorithms/mergesort.js"></script>
+  <script src="./js_files/sorting.js"></script>
+</body>
+
+</html>
