@@ -66,7 +66,7 @@ async function mergeSort(barsArray, leftIndex, rightIndex) {
 
   let midIndex = leftIndex + Math.floor((rightIndex - leftIndex) / 2);
 
-  // change left part color to normal
+  // change right part color to normal as left is in consideration first
   for (let i = midIndex + 1; i <= rightIndex; i++) {
     barsArray[i].style.background = "#ffd000";
   }
@@ -75,11 +75,11 @@ async function mergeSort(barsArray, leftIndex, rightIndex) {
   // sort left part
   await mergeSort(barsArray, leftIndex, midIndex);
 
-  // change left part color to pink
+  // change right part color to pink after sorting of left one
   for (let i = midIndex + 1; i <= rightIndex; i++) {
     barsArray[i].style.background = "#ff0077";
   }
-  // change right part color to normal
+  // change left part color to normal as now right part is in consideration
   for (let i = leftIndex; i <= midIndex; i++) {
     barsArray[i].style.background = "#ffd000";
   }
@@ -88,7 +88,7 @@ async function mergeSort(barsArray, leftIndex, rightIndex) {
   // sort right part of array
   await mergeSort(barsArray, midIndex + 1, rightIndex);
 
-  // change current part color to pink
+  // change current part color to pink prior to merging the left and right arrays together
   for (let i = leftIndex; i <= rightIndex; i++) {
     barsArray[i].style.background = "#ff0077";
   }
